@@ -6,40 +6,47 @@ const HomeScreen({super.key});
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Componentes de flutter'),
+        title: const Text('Componentes de flutter',
+        style: TextStyle(
+          color: Color.fromARGB(255, 255, 255, 255)
+        ),
+        ),
         ),
         body: ListView(
-          children: const [
+          children: [
             ListTile(
-            leading: Icon(Icons.soap_rounded),
-            title: Text('Ya vamonos',
-                      style: TextStyle(color: Colors.purple,
+            leading: const Icon(Icons.shopping_cart_outlined),
+            title: Text('Bolso Gucci',
+            style: Theme.of(context).textTheme.headlineLarge,
+            ),
+            subtitle: const Text('11-02-2024 - Texaslac',
+            style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
                       fontWeight: FontWeight.bold,
                       ),
             ),
-            subtitle: Text('11-02-2024 - Texaslac'),
-            trailing: Icon(Icons.arrow_circle_right),
+            trailing: const Icon(Icons.arrow_circle_right),
             ),
-            Divider(),
-            ListTile(
-            leading: Icon(Icons.calculate_rounded),
-            title: Text('Ya vamonos, por favor',
-            style: TextStyle(color: Colors.purple,
-                      fontWeight: FontWeight.bold,
-                      ),
+            const Divider(),
+            const ListTile(
+            leading: Icon(Icons.shopping_cart_outlined),
+            title: Text('Collar Pandora',
             ),      
-            subtitle: Text('11-9-2024 - Chicago'),
+            subtitle: Text('11-9-2024 - Chicago',
+            style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
+                      fontWeight: FontWeight.bold,
+                      ),),
             trailing: Icon(Icons.arrow_circle_right),
             ),
-            Divider(),
-            ListTile(
-            leading: Icon(Icons.mosque_rounded),
-            title: Text('Ya vamonos T LO RUEGOOOOOO',
-            style: TextStyle(color: Colors.purple,
+            const Divider(),
+            const ListTile(
+            leading: Icon(Icons.person_4_outlined),
+            title: Text('Playera AMIRI',
+            ),
+            subtitle: Text('18-01-2024 - Apiyork',
+            style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
                       fontWeight: FontWeight.bold,
                       ),
-            ),
-            subtitle: Text('18-01-2024 - Apiyork'),
+                      ),
             trailing: Icon(Icons.arrow_circle_right),
             ),
           ],
