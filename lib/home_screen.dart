@@ -15,11 +15,11 @@ const HomeScreen({super.key});
         body: ListView(
           children: [
             ListTile(
-            leading: const Icon(Icons.shopping_cart_outlined),
-            title: Text('Bolso Gucci',
+            leading: const Icon(Icons.input_outlined),
+            title: Text('Entradas',
             style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('11-02-2024 - Texaslac',
+            subtitle: const Text('Diferentes entradas de flutter',
             style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
                       fontWeight: FontWeight.bold,
                       ),
@@ -27,20 +27,22 @@ const HomeScreen({super.key});
             trailing: const Icon(Icons.arrow_circle_right),
             ),
             const Divider(),
-            const ListTile(
-            leading: Icon(Icons.shopping_cart_outlined),
-            title: Text('Collar Pandora',
+            ListTile(
+            leading: const Icon(Icons.list_alt_outlined),
+            title: Text('ListView.Builder',
+            style: Theme.of(context).textTheme.headlineLarge,
             ),      
-            subtitle: Text('11-9-2024 - Chicago',
+            subtitle: Text('Scroll infinito',
             style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
                       fontWeight: FontWeight.bold,
                       ),),
             trailing: Icon(Icons.arrow_circle_right),
             ),
             const Divider(),
-            const ListTile(
-            leading: Icon(Icons.person_4_outlined),
-            title: Text('Playera AMIRI',
+            ListTile(
+            leading: const Icon(Icons.notification_add),
+            title: Text('Notificaciones',
+            style: Theme.of(context).textTheme.headlineLarge,
             ),
             subtitle: Text('18-01-2024 - Apiyork',
             style: TextStyle(color: Color.fromARGB(186, 155, 39, 176),
