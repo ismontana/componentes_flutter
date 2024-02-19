@@ -15,11 +15,11 @@ const HomeScreen({super.key});
         body: ListView(
           children: [
             ListTile(
-            leading: const Icon(Icons.input_outlined),
+            leading: const Icon(Icons.input_rounded),
             title: Text('Entradas',
             style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('Diferentes entradas de flutter'
+            subtitle: const Text('Diferentes widgets para entradas de flutter'
             ),
             trailing: const Icon(Icons.arrow_circle_right),
             ),
@@ -29,7 +29,8 @@ const HomeScreen({super.key});
             title: Text('ListView.Builder',
             style: Theme.of(context).textTheme.headlineLarge,
             ),      
-            subtitle: const Text('Scroll infinito'),
+            subtitle: const Text('Scroll infinito',
+            ),
             trailing: const Icon(Icons.arrow_circle_right),
             ),
             const Divider(),
@@ -38,7 +39,7 @@ const HomeScreen({super.key});
             title: Text('Notificaciones',
             style: Theme.of(context).textTheme.headlineLarge,
             ),
-            subtitle: const Text('18-01-2024 - Apiyork'
+            subtitle: const Text('Creación de notificaciones'
                       ),
             trailing: const Icon(Icons.arrow_circle_right),
             ),
