@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme{
   // Declaraciones de color
@@ -10,13 +11,18 @@ class AppTheme{
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
     appBarTheme: const AppBarTheme(color:mainColor),
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
-        color: Color.fromARGB(255, 37, 0, 29),
+    textTheme: TextTheme(
+      headlineLarge: GoogleFonts.nunito(
+        color: mainColor,
         fontSize: 16.0,
-        fontWeight: FontWeight.bold,
-        fontFamily: 'sans-helvetica',
+        fontWeight: FontWeight.w400,
+        decoration: TextDecoration.underline,
+        decorationColor: Colors.black,
+        decorationStyle: TextDecorationStyle.dashed,
+        decorationThickness: 3.0,
+       // fontStyle: FontStyle.italic,
         ),
+       // bodySmall:
       ),
   );
 }
