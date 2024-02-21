@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/screens/infinite_list_screen.dart';
+import 'package:practica3/screens/inputs_screen.dart';
+import 'package:practica3/screens/notifications_screen.dart';
 import 'package:practica3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -24,10 +27,16 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Diferentes widgets para entradas de flutter',
-              style: Theme.of(context).textTheme.bodySmall, // Aquí aplicamos el nuevo estilo bodySmall
+              style: Theme.of(context).textTheme.bodySmall, 
             ),
             trailing: const Icon(Icons.arrow_circle_right,
                                   color: AppTheme.iconColor),
+                        onTap: (){
+                          final ruta1 = MaterialPageRoute(builder: (context){
+                            return const InputsScreen();
+                          });
+                          Navigator.push(context, ruta1);
+                        },
           ),
           const Divider(),
           ListTile(
@@ -39,10 +48,16 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Scroll infinito',
-              style: Theme.of(context).textTheme.bodySmall, // Aquí aplicamos el nuevo estilo bodySmall
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             trailing: const Icon(Icons.arrow_circle_right,
                                   color: AppTheme.iconColor),
+                          onTap: (){
+                          final ruta2 = MaterialPageRoute(builder: (context){
+                            return const InfinitieListScreen ();
+                          });
+                          Navigator.push(context, ruta2);
+                        },
           ),
           const Divider(),
           ListTile(
@@ -54,10 +69,16 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text(
               'Creación de notificaciones',
-              style: Theme.of(context).textTheme.bodySmall, // Aquí aplicamos el nuevo estilo bodySmall
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             trailing: const Icon(Icons.arrow_circle_right,
                                   color: AppTheme.iconColor),
+                          onTap: (){
+                          final ruta3 = MaterialPageRoute(builder: (context){
+                            return const NotificationsScreen();
+                          });
+                          Navigator.push(context, ruta3);
+                        },
           ),
         ],
       ),
