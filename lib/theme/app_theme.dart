@@ -21,7 +21,7 @@ class AppTheme{
         fontSize: 16.0,
         fontWeight: FontWeight.w800,
         decoration: TextDecoration.none,
-        decorationColor: Colors.black,
+        decorationColor: Colors.white,
         decorationStyle: TextDecorationStyle.dashed,
         decorationThickness: 3.0,
        // fontStyle: FontStyle.italic,
