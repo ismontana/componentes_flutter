@@ -14,7 +14,33 @@ class AppTheme{
   // Declaraciones del tema claro
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
-    appBarTheme: const AppBarTheme(color:mainColor),
+    appBarTheme: AppBarTheme(
+      color:mainColor,
+      titleTextStyle: GoogleFonts.nunito(
+        color: mainColor,
+        fontSize: 28.5,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    iconTheme: const IconThemeData(
+      color: iconColor,
+      size: 35.0,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(
+          mainColor
+          ),
+          foregroundColor: MaterialStateProperty.all(
+          backColor
+          ),
+        textStyle: MaterialStateProperty.all(
+          GoogleFonts.nunito(
+            fontSize: 12.0,
+            fontStyle: FontStyle.italic),
+        ),
+      ),
+    ),
     textTheme: TextTheme(
       headlineLarge: GoogleFonts.nunito(
         color: mainColor,
