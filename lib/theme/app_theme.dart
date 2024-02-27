@@ -10,6 +10,7 @@ class AppTheme{
   static const backColor = Color.fromARGB(255, 225, 212, 255);
   // Declaraciones para bodySmall
   static const subtitleColor = Color.fromARGB(255, 114, 111, 113);
+  static const negroColor = Colors.black;
 
   // Declaraciones del tema claro
   static final ThemeData lightTheme = ThemeData.light().copyWith(
@@ -17,7 +18,7 @@ class AppTheme{
     appBarTheme: AppBarTheme(
       color:mainColor,
       titleTextStyle: GoogleFonts.nunito(
-        color: mainColor,
+        color: subtitleColor,
         fontSize: 28.5,
         fontWeight: FontWeight.bold,
       ),
@@ -51,6 +52,13 @@ class AppTheme{
         decorationStyle: TextDecorationStyle.dashed,
         decorationThickness: 3.0,
        // fontStyle: FontStyle.italic,
+        ),
+         headlineMedium: GoogleFonts.nunito(
+        color: negroColor,
+        fontSize: 15.0,
+        fontWeight: FontWeight.w800,
+        decorationStyle: TextDecorationStyle.dashed,
+        decorationThickness: 1.5,
         ),
       // Define el estilo para bodySmall
       bodySmall: GoogleFonts.nunito(
