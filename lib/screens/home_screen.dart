@@ -30,6 +30,13 @@ class HomeScreen extends StatelessWidget {
               'Diferentes widgets para entradas de flutter',
               style: Theme.of(context).textTheme.bodySmall, 
             ),
+            // OPCIONES DEL CIRCULO DE CARGA / GRAFICA
+            // trailing: const CircularProgressIndicator(
+            //   value: 0.35, // Valor
+            //   strokeWidth: 7.0, // Ancho
+            //   color: Color.fromARGB(255, 54, 76, 202),
+            //   backgroundColor: Color.fromRGBO(255, 7, 7, 1),
+            // ),
             trailing: IconTheme(
             data: AppTheme.lightTheme.iconTheme,
             child: const Icon(Icons.arrow_circle_right),),

@@ -67,6 +67,12 @@ class AppTheme{
         fontStyle: FontStyle.italic,
         fontWeight: FontWeight.w600,
       ),
+      bodyMedium: GoogleFonts.nunito(
+        color: subtitleColor,
+        fontSize: 12.0,
+        fontStyle: FontStyle.italic,
+        fontWeight: FontWeight.w600,
+      ),
     ),
   );
 }
