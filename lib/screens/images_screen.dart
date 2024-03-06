@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3/theme/app_theme.dart';
 
 class ImagesScreen extends StatefulWidget {
   const ImagesScreen({super.key});
@@ -20,17 +21,41 @@ class _ImagesScreenState extends State<ImagesScreen> {
       body: ListView(
         children: [
           imageCard(),
+          imageWeb(),
         ],
         ));
   }
 
   Card imageCard(){
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30)),
-            child: const Image(
-              image: AssetImage('assets/imgs/img2.png'),
+      shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(30)),
+      margin: const EdgeInsets.all(20),
+      elevation: 10,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(30),
+        child: Column(
+          children: [
+            const Image(
+              image: AssetImage('assets/imgs/img1.png'),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: const Text(
+                'QUIEN ES ESE POKEMON',
+                // AppTheme.lightTheme.textTheme.bodySmall
+                style: TextStyle(color: Colors.black),
               ),
+            ),
+          ],
+        ),
+      ),
     );
   }
+
+  Widget imageWeb(){
+    return Center(
+      child: Image.network('https://play-lh.googleusercontent.com/m_ShwHL-ke_QIh4ApeMmS_2kjOhlEcnGOdaxJ0FMQ4PupOt9ns31QEwfXyaDvpqxJXg=w526-h296-rw'),
+    );
+  }
+
 }
