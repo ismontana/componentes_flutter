@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica3/theme/app_theme.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class ImagesScreen extends StatefulWidget {
   const ImagesScreen({super.key});
@@ -52,9 +53,25 @@ class _ImagesScreenState extends State<ImagesScreen> {
     );
   }
 
-  Widget imageWeb(){
-    return Center(
-      child: Image.network('https://play-lh.googleusercontent.com/m_ShwHL-ke_QIh4ApeMmS_2kjOhlEcnGOdaxJ0FMQ4PupOt9ns31QEwfXyaDvpqxJXg=w526-h296-rw'),
+    Stack imageWeb(){
+    return Stack(
+      children: <Widget>[
+     const Center(
+          child: CircularProgressIndicator()
+        ),
+       Center(
+         child: SizedBox(
+            height: 400,
+            width: 400,
+            child: 
+            FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage, 
+              image: 'https://play-lh.googleusercontent.com/m_ShwHL-ke_QIh4ApeMmS_2kjOhlEcnGOdaxJ0FMQ4PupOt9ns31QEwfXyaDvpqxJXg=w526-h296-rw'
+              ),
+            // Image.network() Mostrar una imagen de la web
+          ),
+       ),
+    ],
     );
   }
 
